@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- final.xml -->
+<Pentateuch_Books>
+	<Name>Genesis
+		<Chapters>50</Chapters></Name>
+	
+	<Name>Exodus
+		<Chapters>40</Chapters></Name>
+	
+	<Name>Leviticus
+		<Chapters>27</Chapters></Name>
+	
+	<Name>Numbers
+		<Chapters>36</Chapters></Name>
+	
+	<Name>Deuteronomy
+		<Chapters>34</Chapters></Name>
+</Pentateuch_Books>

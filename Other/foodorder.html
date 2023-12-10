@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<!-- foodorder.html -->
+<html lang="en">
+<head>
+    <title>Christmas Order Form</title>
+    <style type="text/css">
+        table, th, td {
+            border: thin solid black;
+        }
+    </style>
+</head>
+<body>
+    <form action="http://localhost/foodorder.php" method="post">
+        <label>Full Name:<input type="text" name="customer" size="30" /></label>
+        <table>
+            <caption> <h3>Holiday Food Order</h3> </caption>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td>Appetizer - Candy Cane Antipasto</td>
+                <td>$45.00</td>
+                <td><input type="text" name="aqty" size="6" /></td>
+            </tr>
+            <tr>
+                <td>Main Dish - Pineapple Glazed Ham</td>
+                <td>$130.00</td>
+                <td><input type="text" name="mqty" size="6" /></td>
+            </tr>
+            <tr>
+                <td>Dessert - Chocolate-Dipped Christmas Prezel Sticks</td>
+                <td>$65.00</td>
+                <td><input type="text" name="dqty" size="6" /></td>
+            </tr>
+        </table>
+        <br />
+        <input type="submit" value="Submit Order" />
+        <input type="reset" value="Clear Order Form" />
+    </form>
+</body>
+</html>

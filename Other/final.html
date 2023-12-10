@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Change Password</title>
+    <style type="text/css">
+                h2 {
+                        color: blue;
+
+        }
+
+                label {
+                        font-family: "Times New Roman", Times, serif;
+                        font-weight: bold;
+
+        }
+
+
+        /* c) Add Document-Level CSS code here to
+                change the <h2> header color to blue and
+                 the password control box labels to bold
+                 'Times New Roman' font */
+
+    </style>
+
+    <script type="text/javascript">
+        function checkPassword() {
+            // d)     Add JavaScript code here that will use DOM and
+            //        pattern matching to check that the two passwords
+            //        entered are the same and that they have:
+            //        - At least 8 characters
+            //        - At least 1 number
+            //        - At least 1 lower case letter
+            //        - At least 1 upper case letter
+            //        - At least one special character (i.e., non-word character)
+            //        NOTE: If any of the above requirements are not met, display
+            //      an alert window with appropriate error message (e.g., "Passwords
+            //        do not match." or "Password must have at least 8 characters.")
+            //      If all the requirements are met, then display a confirm
+            //      window with message:  "Password changed."
+            // Get the password input fields from the DOM
+            const Input1 = document.getElementById('pw1');
+            const Input2 = document.getElementById('pw2');
+
+            // Define a regular expression to check if the password meets the requirements
+            const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^\w\d\s:])([^\s]){8,}$/;
+
+            // Define a function to check if the passwords match and meet the requirements
+            // Get the values of the password input fields
+            const pw1 = Input1.value;
+            const pw2 = Input2.value;
+
+            // Check if the passwords match
+            if (pw1 !== pw2) {
+                // If the passwords do not match, show an error message
+                alert('Passwords do not match.');
+                return;
+            }
+
+            // Check if the password meets the requirements
+            if (!passwordRegex.test(pw1)) {
+                // If the password does not meet the requirements, show an error message
+                alert('Password must have at least 8 characters, 1 number, 1 lower case letter, 1 upper case letter, and 1 special character.');
+                return;
+            }
+
+            // If the passwords match and meet the requirements, show a success message
+            confirm('Password changed.');
+        }
+    </script>
+</head>
+<body>
+    <h2> Change Password </h2>
+    <form action="" onsubmit=checkPassword()>
+        <p>
+            <!-- a) Add HTML code here to display two password control boxes so
+             that they do not display the text that is typed.  One box is for the
+               user to enter a new password and the other to re-enter the password -->
+            <label for="pw1">New password: </label>
+            <input type="password" id="pw1"><br><br>
+            <label for="pw2">Re-enter password: </label>
+            <input type="password" id="pw2"><br><br>
+        </p>
+        <!-- b) Add HTML code here to display a Submit button -->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
